@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className='px-14 py-5 bg-zinc-50 text-black fixed w-full flex justify-between font-fira z-50'>
-      <p className='text-xl'>DA</p>
-      <ul className='flex gap-4'>
+    <nav className='px-14 py-5 bg-zinc-50 text-black fixed w-full md:flex justify-between font-fira z-50 items-center hidden'>
+      <p className='text-2xl'>DA</p>
+      <ul className='flex gap-10 items-center'>
         <li>
           <Link to='/home' className='hover:underline'>
             Início
@@ -27,13 +27,17 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <div className='flex gap-2 text-xl'>
-        <button>
+      <div className='flex gap-4 text-2xl'>
+        <a target='_blank' rel='noopener noreferrer' href='https://github.com/otherRick'>
           <FaGithub />
-        </button>
-        <button>
+        </a>
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://www.linkedin.com/in/derick-abreu/'
+        >
           <FaLinkedin />
-        </button>
+        </a>
       </div>
     </nav>
   );
