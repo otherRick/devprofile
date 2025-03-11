@@ -1,4 +1,9 @@
-export const BandAind = ({ top, right }) => {
+interface BandAindProps {
+  top?: string;
+  right?: string;
+}
+
+export const BandAind = ({ top, right }: BandAindProps) => {
   console.log(top, right);
 
   return (

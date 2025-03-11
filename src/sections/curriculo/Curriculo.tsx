@@ -59,7 +59,7 @@ export const Curriculo = () => {
         <div className='flex flex-col items-center gap-2'>
           <p className='text-xs '>Baixe meu curriculo em PDF</p>
           <a
-            href='https://firebasestorage.googleapis.com/v0/b/portfoto-ac408.appspot.com/o/devPortfolio%2Ftabela_spa_precos.pdf?alt=media&token=5d701d33-2725-4b9c-9e45-be203aeeabb1'
+            href='https://firebasestorage.googleapis.com/v0/b/portfoto-ac408.appspot.com/o/devPortfolio%2FDerick%20Abreu-curriculum-1.pdf?alt=media&token=b4457b5d-f2a8-4fe2-8336-4d6c254332cd'
             download
             target='_blank'
             rel='noopener noreferrer'
