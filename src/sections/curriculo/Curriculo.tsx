@@ -51,8 +51,10 @@ export const Curriculo = () => {
         <div className='flex flex-col gap-4 items-center'>
           <p className='text-2xl font-semibold text-white bg-black'>Habilidades</p>
           <div className='grid grid-cols-3 gap-4 text-sm font-semibold'>
-            {stacks.map((stack) => (
-              <p className='text-sm font-semibold'>{stack}</p>
+            {stacks.map((stack, index) => (
+              <p key={index} className='text-sm font-semibold'>
+                {stack}
+              </p>
             ))}
           </div>
         </div>
