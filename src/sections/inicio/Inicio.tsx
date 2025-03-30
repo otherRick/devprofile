@@ -7,7 +7,7 @@ export const Inicio = () => {
       <Photo />
       <div className='flex flex-col gap-4 md:w-full w-80'>
         <div>
-          <p className='md:text-4xl text-2xl'>Olá, Sou Derick Abreu</p>
+          <p className='md:text-4xl text-2xl'>Olá, sou Derick Abreu</p>
           <p className='md:text-4xl text-2xl bg-black text-white w-fit'>Desenvolvedor Front-End</p>
         </div>
         <p>
@@ -18,13 +18,13 @@ export const Inicio = () => {
 
         <div className='flex gap-4'>
           <Link to='/contato' className='bg-black rounded-md text-white px-4 py-2 shadow text-xs'>
-            Contacte me
+            Entre em contato
           </Link>
           <Link
             to='/projetos'
             className='bg-transparent border border-gray-400 rounded-md text-black px-4 py-2 shadow text-xs'
           >
-            Check my work
+            Confira alguns projetos
           </Link>
         </div>
       </div>
