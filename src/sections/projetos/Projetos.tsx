@@ -20,7 +20,7 @@ export const Projetos = () => {
           </p>
         </div>
         <div className='p-6 flex flex-col items-center md:max-w-[1000px] md:w-max w-full'>
-          <div className='relative md:w-full max-h-[500px] md:overflow-x-auto overflow-y-auto no-scrollbar shadow-inner bg-zinc-200'>
+          <div className='relative md:w-full max-h-[500px] md:overflow-x-auto overflow-y-auto shadow-inner bg-zinc-200'>
             <div className='md:flex md:flex-row flex-col gap-4 px-4 py-2 w-max space-y-4 md:space-y-0'>
               {filteredProjects.map((project) => (
                 <div
