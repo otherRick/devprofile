@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# DevProfile
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém o código-fonte de uma Aplicação de Página Única (SPA) desenvolvida para apresentar o perfil de um desenvolvedor.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática ao código.
+- **Vite**: Ferramenta de build e desenvolvimento rápida para projetos front-end modernos.
+- **Firebase**: Plataforma de desenvolvimento de aplicativos que fornece serviços como hospedagem e autenticação.
 
-## Expanding the ESLint configuration
+## Estrutura do Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **public/**: Contém arquivos estáticos e o `index.html` principal.
+- **src/**: Inclui o código-fonte principal da aplicação React.
+- **.github/workflows/**: Configurações para integração contínua e deploy automatizado.
 
-- Configure the top-level `parserOptions` property like this:
+## Rotas da Aplicação
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+A aplicação é uma SPA (Single Page Application), utilizando React Router para gerenciar as rotas:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- `/` - **Home**: Apresentação do desenvolvedor, suas habilidades e experiência.
+- `/projects` - **Projetos**: Lista de projetos desenvolvidos, com descrições e links para repositórios.
+- `/contact` - **Contato**: Formulário e informações de contato para conexões profissionais.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Configuração e Execução
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Instalação das Dependências**:
+
+   ```bash
+   npm install
+   ```
+
+2. **Execução do Ambiente de Desenvolvimento**:
+
+   ```bash
+   npm run dev
+   ```
+
+   O servidor de desenvolvimento será iniciado e a aplicação estará acessível em `http://localhost:3000`.
+
+3. **Build para Produção**:
+
+   ```bash
+   npm run build
+   ```
+
+   Os arquivos otimizados para produção serão gerados no diretório `dist/`.
+
+## Deploy
+
+A aplicação está configurada para ser implantada no Firebase Hosting. Para realizar o deploy:
+
+1. **Login no Firebase**:
+
+   ```bash
+   firebase login
+   ```
+
+2. **Inicialização do Projeto Firebase**:
+
+   ```bash
+   firebase init
+   ```
+
+   Siga as instruções para configurar o projeto, selecionando "Hosting" e vinculando ao projeto correto no Firebase.
+
+3. **Deploy para o Firebase**:
+
+   ```bash
+   firebase deploy
+   ```
+
+   A aplicação será implantada e estará disponível no domínio fornecido pelo Firebase.
+
+## Considerações Finais
+
+Este projeto serve como uma excelente base para desenvolvedores que desejam criar uma apresentação online de seu perfil profissional. Ao utilizar tecnologias modernas como React, TypeScript e Vite, juntamente com a hospedagem no Firebase, garante-se uma aplicação rápida, tipada e facilmente implantável.
+
+Para contribuições ou sugestões, sinta-se à vontade para abrir uma issue ou enviar um pull request.
